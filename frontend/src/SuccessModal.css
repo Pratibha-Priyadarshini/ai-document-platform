@@ -1,0 +1,118 @@
+/* Success Modal Overlay */
+.success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+/* Success Content */
+.success-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: successSlideIn 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  pointer-events: auto;
+}
+
+@keyframes successSlideIn {
+  from {
+    transform: scale(0.5) translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Success Icon */
+.success-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  animation: successPulse 0.6s ease;
+}
+
+@keyframes successPulse {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Success Message */
+.success-message {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Light Theme */
+body.light .success-content {
+  background: rgba(255, 255, 255, 0.98);
+  border: 3px solid #66bb6a;
+}
+
+body.light .success-icon {
+  background: linear-gradient(135deg, #66bb6a 0%, #43a047 100%);
+  box-shadow: 0 8px 24px rgba(76, 175, 80, 0.4);
+}
+
+body.light .success-message {
+  color: #2e7d32;
+}
+
+/* Dark Theme */
+body.dark .success-content {
+  background: rgba(62, 39, 35, 0.98);
+  border: 3px solid #a1887f;
+}
+
+body.dark .success-icon {
+  background: linear-gradient(135deg, #8d6e63 0%, #6d4c41 100%);
+  box-shadow: 0 8px 24px rgba(141, 110, 99, 0.4);
+}
+
+body.dark .success-message {
+  color: #d7ccc8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .success-content {
+    padding: 24px 32px;
+  }
+
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 36px;
+  }
+
+  .success-message {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+app.db
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React
+/frontend/build
+/frontend/.env.local
+/frontend/.env.production.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Uploaded themes
+/backend/themes/
+
+# Test files
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation (keep only main docs)
+FEATURES_*.md
+FIX_*.md
+WORD_*.md
+DARK_MODE_*.md
+FEEDBACK_*.md
+SIMPLIFIED_*.md
+SETUP_*.md
